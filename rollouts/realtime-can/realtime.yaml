@@ -56,7 +56,7 @@ spec:
     spec:
       containers:
       - name: realtimeapp
-        image: gbaeke/fluxapp:1.0.1
+        image: gbaeke/fluxapp:1.0.0
         env:
         - name: REDISHOST
           value: "redisapp:6379"
@@ -80,7 +80,7 @@ spec:
       - setWeight: 20
       - pause:
           duration: "2m"
-      - setWeight: 50
+      - setWeight: 60
       - pause: {}
 ---
 apiVersion: v1
