@@ -48,7 +48,7 @@ spec:
   selector:
     matchLabels:
       app: realtime
-  replicas: 7
+  replicas: 5
   template:
     metadata:
       labels:
@@ -56,7 +56,7 @@ spec:
     spec:
       containers:
       - name: realtimeapp
-        image: gbaeke/fluxapp:1.0.1
+        image: gbaeke/fluxapp:1.0.0
         env:
         - name: REDISHOST
           value: "redisapp:6379"
@@ -80,7 +80,7 @@ spec:
       - setWeight: 20
       - pause:
           duration: "1m"
-      - setWeight: 60
+      - setWeight: 50
       - pause: {}
 ---
 apiVersion: v1
